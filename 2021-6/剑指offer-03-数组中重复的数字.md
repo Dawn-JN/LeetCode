@@ -19,7 +19,6 @@
 **代码**
 
 ~~~python
-{
 # 遍历
 def findRepeatNumber(self, nums):
     """
@@ -50,6 +49,4 @@ def findRepeatNumber2(self, nums):
             nums[i] = nums[temp]
             nums[temp] = temp
     return -1
-
-}
 ~~~
