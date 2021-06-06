@@ -17,7 +17,7 @@
 
 **代码**
 
-···python
+~~~python
 {
 # 遍历
 def findRepeatNumber(self, nums):
@@ -49,4 +49,4 @@ def findRepeatNumber(self, nums):
     return -1
 
 }
-···
+~~~
