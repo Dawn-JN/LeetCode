@@ -14,7 +14,7 @@
 
 1.遍历数组
 
-2.原地交换，数组长度为n，范围0~n-1，做nums[i] = i 形式数组，当有nums[i] != i时，若有nums[i] = nums[nums[i]]，说明有重复，反之交换nums[i]， nums[nums[i]]位置
+2.原地交换，数组长度为n，范围0~n-1，做nums[i] = i 形式数组（类似哈希表），当有nums[i] != i时，若有nums[i] = nums[nums[i]]，说明有重复，反之交换nums[i]， nums[nums[i]]位置
 
 **代码**
 
@@ -34,7 +34,7 @@ def findRepeatNumber(self, nums):
 
 
 # 原地交换
-def findRepeatNumber(self, nums):
+def findRepeatNumber2(self, nums):
     """
     :type nums: List[int]
     :rtype: int
@@ -42,8 +42,10 @@ def findRepeatNumber(self, nums):
     temp = 0
     for i in range(len(nums)):
         while nums[i] != i:
+            # 判断
             if nums[i] == nums[nums[i]]:
                 return nums[i]
+            # 交换
             temp = nums[i]
             nums[i] = nums[temp]
             nums[temp] = temp
